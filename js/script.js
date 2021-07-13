@@ -1,12 +1,21 @@
 const slider = document.querySelector('.slider-container'),
   slides = Array.from(document.querySelectorAll('.slide'))
+const audio = document.querySelector("audio")
+
+const songArray = [
+  "audio/audio1.wav",
+  "audio/audio2.wav",
+  "audio/audio3.wav",
+  "audio/audio4.wav",
+]
 
 let isDragging = false, // Is mouse clicked/finger on device; only for browser hovers
   startPos = 0, // first click poistion
   currentTranslate = 0, // translateX value 
   prevTranslate = 0,
   animationID = 0, // id for canceling request frame  
-  currentIndex = 0 // current slide
+  currentIndex = 0, // current slide
+  isPlaying = true // Is slide audio playing
 
 slides.forEach((slide, index) => {
   // Prevent default image selection upon hover
@@ -31,6 +40,21 @@ window.oncontextmenu = function (event) {
   return false
 }
 
+function loadAudio (){
+  audio.src = songArray[currentIndex]
+}
+
+function playAudio() {
+  loadAudio()
+  audio.play()
+  isPlaying = true
+}
+
+function pauseAudio() {
+  audio.pause()
+  isPlaying = false
+}
+
 // Finger on device
 function touchStart(index) {
   return function (event) {
@@ -51,8 +75,17 @@ function touchEnd() {
 
   // Snap in next slide after certain movement 
   const movedBy = currentTranslate - prevTranslate
-  if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1
-  if (movedBy > 100 && currentIndex > 0) currentIndex -= 1
+  if (movedBy < -100 && currentIndex < slides.length - 1) {
+    if (isPlaying) pauseAudio()
+    currentIndex += 1
+    playAudio()
+  }
+  if (movedBy > 100 && currentIndex > 0) {
+    if (isPlaying) pauseAudio()
+    currentIndex -= 1
+    playAudio()
+    
+  }
 
   setPositionByIndex()
 }
