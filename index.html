@@ -1,42 +1,40 @@
-<!-- html -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Spotlight Report</title>
-    <link rel="stylesheet" href="css/slides.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotLight Report</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- Define the slideshow container -->
-<div id="slideshow">
-	<div class="slide-wrapper">
-	<div class="slide">
-		<h1 class="slide-number" style="color:darkmagenta;">
-			SpotLight Report
-		</h1>
-		<p class="claim"> Your music took a world tour. </p>
-		<p class="description"> From <span class=highlight>Australia</span> to <span class=highlight>Spain</span>, you were heard in <span class=highlight>79 countries</span>. (That's like an aux cord stretching <span class=highlight>10,902 miles</span>.)</p>
-		<image src=image/globe.png></image>
-	</div>
-	<div class="slide">
-		<h1 class="slide-number" style="color:yellowgreen;">
-		SpotLight Report
-		</h1>
-	</div>
-	<div class="slide">
-		<h1 class="slide-number" style="color:darkmagenta;">
-		SpotLight Report
-		</h1>
-	</div>
-	<div class="slide">
-		<h1 class="slide-number" style="color:yellowgreen;">
-		SpotLight Report
-		</h1>
-	</div>
-	</div>
-</div>
-<div>
-	<audio autoplay loop>
-		<source src="audio/audio.mp3" type="audio/mp3">
-	</audio>
-</div>
+    <div class="slider-container">
+        <div class="slide">
+            <video class="video" src="video/pool.mp4" muted loop autoplay></video>
+            <h2>Tours & Travels</h2>
+            <h4>Ready for you 2021 wrapped?</h4>
+            <!-- <img src="https://i.ibb.co/y08W0Jx/image1.png" alt="" /> -->
+        </div>
+        <div class="slide">
+            <video class="video" src="video/fitness.mp4" muted loop autoplay></video>
+            <h2>360 Fitness Gear</h2>
+            <h4>Ready for you 2021 wrapped?</h4>
+        </div>
+
+        <div class="slide">
+            <h2>iPhone 12</h2>
+            <h4>$799</h4>
+            <img src="https://i.ibb.co/NYdGg2q/image2.png" alt="" />
+            <!-- <video class="video" src="video/travel.mp4" muted loop autoplay></video> -->
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+        <div class="slide">
+            <h2>iPad</h2>
+            <h4>$599</h4>
+            <img src="https://i.ibb.co/Jd3t4hQ/image3.png" alt="" />
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+    </div>  
+    <script src="js/script.js"></script>
 </body>
 </html>
