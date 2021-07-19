@@ -362,3 +362,76 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+/* The outermost element*/
+.header-wrapper {
+  overflow: hidden;
+  width:400px;
+  height:200px;
+  text-align:center;
+}
+
+.zoominheader {
+  width:400px;
+  height:200px;
+  text-align:center;
+  background: url("https://2.bp.blogspot.com/-jV7dJqJnzAQ/V1tLFVCPw_I/AAAAAAAAJhk/EH40vG3VTZ4t7gn38pHKA0nW9RyI84OZwCK4B/s400-p/sts-min.jpg");
+  background-size: auto;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-animation: zoomin 10s ease-in infinite;
+  animation: zoomin 10s ease-in infinite;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
+/* The innermost element*/
+.zoomoutheader {
+  width:400px;
+  height:200px;
+  text-align:center;
+  background: none;
+  -webkit-animation: zoomout 10s ease-in infinite;
+  animation: zoomout 10s ease-in infinite;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
+
+
+/* Zoom in Keyframes */
+@-webkit-keyframes zoomin {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+}
+@keyframes zoomin {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+} /*End of Zoom in Keyframes */
+
+/* Zoom out Keyframes */
+@-webkit-keyframes zoomout {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.67);}
+  100% {transform: scale(1);}
+}
+@keyframes zoomout {
+    0% {transform: scale(1);}
+  50% {transform: scale(0.67);}
+  100% {transform: scale(1);}
+}
