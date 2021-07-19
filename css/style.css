@@ -144,6 +144,16 @@ body {
   color:#F2A600;
 }
 
+.stat-highlight-green {
+  top:196px;
+  color:var(--co-7ggcp, #42AE66);
+}
+
+.stat-highlight-blue {
+  top:196px;
+  color:var(--co-7ggcp, #42AE66);
+}
+
 
 .text-highlight {
   left:106px;
