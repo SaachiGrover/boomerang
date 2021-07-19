@@ -17,6 +17,21 @@ let isDragging = false, // Is mouse clicked/finger on device; only for browser h
   currentIndex = 0, // current slide
   isPlaying = true // Is slide audio playing
 
+// Temp function for adding review clones to fill screen
+appendNodes("Shefali Singh", null, null, null)
+function appendNodes(name, stars, post_time, review) {
+  let cards = Array.from(document.querySelectorAll('.card'))
+  cards.forEach((card, index) => {
+    for(let i=0; i<6; i++) {
+      console.log("clone")
+      let clone = card.cloneNode(true)
+      let user_name = clone.querySelector('.name')
+      user_name.innerText = name
+      card.parentNode.appendChild(clone);
+    }
+  })
+}
+
 slides.forEach((slide, index) => {
   // Prevent default image selection upon hover
   slide.addEventListener('dragstart', (e) => e.preventDefault())
@@ -68,6 +83,19 @@ function touchStart(index) {
   }
 }
 
+// Non-functional; Needs revision 
+// Does not reset paused/delayed animations 
+// function revertAnimations() {
+//   const allAnimations = document.getAnimations();
+//   console.log(allAnimations)
+//   allAnimations.forEach((ani) => {
+//     // ani.pause();
+//     console.log(ani.playState);
+//     ani.reverse();
+//     ani.play();
+//   });
+// }
+
 // Finger Removed
 function touchEnd() {
   isDragging = false
@@ -79,12 +107,13 @@ function touchEnd() {
     if (isPlaying) pauseAudio()
     currentIndex += 1
     playAudio()
+    // revertAnimations()
   }
   if (movedBy > 100 && currentIndex > 0) {
     if (isPlaying) pauseAudio()
     currentIndex -= 1
     playAudio()
-    
+    // revertAnimations()
   }
 
   setPositionByIndex()

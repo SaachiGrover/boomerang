@@ -6,9 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpotLight Report</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- TODO: Resolve CORS issue for html import  -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript"> 
+        $(function(){
+          $("#review-slide").load("reviews.html"); 
+        });
+        </script>  -->
 </head>
 <body>
     <div class="slider-container">
+        <!-- <div class="slide" id="review-slide"></div> -->
+        <div class=slide>
+            <div class="review">
+                <div class="dissolve">
+                    <div class="column column1">
+                        <div class="card">
+                            <span class="name">Shefali Singh</span>
+                            <div class="star-group">
+                                <img src="image/star.svg" class="star">
+                                <img src="image/star.svg" class="star">
+                                <img src="image/star.svg" class="star">
+                                <img src="image/star.svg" class="star">
+                            </div>
+                            <span class="post-time">1 year ago</span>
+                            <span class=review-text>Bridal makeup - The lady named Jayashree did an excellent job. I looked really great on my wedding day. She had also styled my hair wonderfully and did the draping of my lehnga. Excellent work.</span>
+                        </div>
+                    </div>
+                    <div class="column column2">
+                        <div class="card">
+                            <span class="name">Shefali Singh</span>
+                            <div class="star-group">
+                                <img src="image/star.svg" class="star">
+                                <img src="image/star.svg" class="star">
+                                <img src="image/star.svg" class="star">
+                                <img src="image/star.svg" class="star">
+                            </div>
+                            <span class="post-time">1 year ago</span>
+                            <span class=review-text>Bridal makeup - The lady named Jayashree did an excellent job. I looked really great on my wedding day. She had also styled my hair wonderfully and did the draping of my lehnga. Excellent work.</span>
+                        </div>
+                    </div>
+                    <div class="column column3">
+                        <div class="card">
+                            <span class="name">Shefali Singh</span>
+                            <div class="star-group">
+                                <img src="image/star.svg" class="star">
+                                <img src="image/star.svg" class="star">
+                                <img src="image/star.svg" class="star">
+                                <img src="image/star.svg" class="star">
+                            </div>
+                            <span class="post-time">1 year ago</span>
+                            <span class=review-text>Bridal makeup - The lady named Jayashree did an excellent job. I looked really great on my wedding day. She had also styled my hair wonderfully and did the draping of my lehnga. Excellent work.</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logo & Business Name to be added to all slides -->
+                <img src="https://fonts.gstatic.com/s/i/productlogos/google_my_business/v6/192px.svg" class="logo">
+                <span class="business-name">MeriBindiya</span>
+                
+                <!-- Animated text appear -->
+                <div class="appear-animate" align-items="left">
+                    <span class="claim">Your customers have a lot to say</span>
+                    <span class="highlight stat-highlight">45</span>
+                    <span class="highlight text-highlight">Reviews</span>
+                    <span class="highlight stat-highlight" style="left:59px;top:257px;"  >4</span>
+                    <div class="big-star-group">
+                        <img src="image/star.svg" class="star big-star">
+                        <img src="image/star.svg" class="star big-star">
+                        <img src="image/star.svg" class="star big-star">
+                        <img src="image/star.svg" class="star big-star">
+                    </div>
+                    <span class="cta-text">Maybe let them know <br> you're grateful?</span>
+                    <a href="#" class="cta-button">
+                        <img padding-right="10px" width="18px" src="https://fonts.gstatic.com/s/i/googlematerialicons/thumb_up/v16/white-24dp/1x/gm_thumb_up_white_24dp.png"></img>
+                        <span>Say Thanks</span>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="slide">
             <video class="video" src="video/pool.mp4" muted loop autoplay></video>
             <h2>Tours & Travels</h2>
@@ -25,13 +100,6 @@
             <h2>iPhone 12</h2>
             <h4>$799</h4>
             <img src="https://i.ibb.co/NYdGg2q/image2.png" alt="" />
-            <!-- <video class="video" src="video/travel.mp4" muted loop autoplay></video> -->
-            <a href="#" class="btn">Buy Now</a>
-        </div>
-        <div class="slide">
-            <h2>iPad</h2>
-            <h4>$599</h4>
-            <img src="https://i.ibb.co/Jd3t4hQ/image3.png" alt="" />
             <a href="#" class="btn">Buy Now</a>
         </div>
     </div>  
