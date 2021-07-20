@@ -103,14 +103,14 @@ body {
   width: 100vw;
   height: 100vh;
   opacity: 0;
-  animation: appear 1s ease-in 4s forwards;
+  /*animation: appear 1s ease-in 4s forwards;*/
 }
 
 .appear-animate-soon {
   /* width: 100vw;
   height: 100vh; */
   opacity: 0;
-  animation: appear 1s ease-in 2s forwards;
+  /*animation: appear 1s ease-in 2s forwards;*/
 }
 
 @keyframes appear {

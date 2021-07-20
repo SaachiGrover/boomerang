@@ -1,12 +1,12 @@
 const slider = document.querySelector('.slider-container'),
-  slides = Array.from(document.querySelectorAll('.slide'))
+slides = Array.from(document.querySelectorAll('.slide'))
 const audio = document.querySelector("audio")
 
 const songArray = [
-  "audio/audio1.wav",
-  "audio/audio2.wav",
-  "audio/audio3.wav",
-  "audio/audio4.wav",
+"audio/audio1.wav",
+"audio/audio2.wav",
+"audio/audio3.wav",
+"audio/audio4.wav",
 ]
 
 let isDragging = false, // Is mouse clicked/finger on device; only for browser hovers
@@ -72,6 +72,7 @@ function pauseAudio() {
 
 // Finger on device
 function touchStart(index) {
+  console.log("touchstart" + index);
   return function (event) {
     currentIndex = index
     startPos = getPositionX(event)
@@ -98,6 +99,7 @@ function touchStart(index) {
 
 // Finger Removed
 function touchEnd() {
+  console.log("touchEnd");
   isDragging = false
   cancelAnimationFrame(animationID)
 
@@ -105,13 +107,13 @@ function touchEnd() {
   const movedBy = currentTranslate - prevTranslate
   if (movedBy < -100 && currentIndex < slides.length - 1) {
     if (isPlaying) pauseAudio()
-    currentIndex += 1
+      currentIndex += 1
     playAudio()
     // revertAnimations()
   }
   if (movedBy > 100 && currentIndex > 0) {
     if (isPlaying) pauseAudio()
-    currentIndex -= 1
+      currentIndex -= 1
     playAudio()
     // revertAnimations()
   }
@@ -121,6 +123,7 @@ function touchEnd() {
 
 // Finger moved on device
 function touchMove(event) {
+  console.log("touchMove");
   if (isDragging) {
     const currentPosition = getPositionX(event)
     currentTranslate = prevTranslate + currentPosition - startPos
@@ -144,26 +147,45 @@ function setSliderPosition() {
 function setPositionByIndex() {
   currentTranslate = currentIndex * -window.innerWidth
   prevTranslate = currentTranslate
-  setSliderPosition()
+  setSliderPosition();
+  if (currentIndex === 0) {
+    animateTitle();
+  }
+  for (let i = 1; i < 6; i++) {
+    id = "appear-animate-" + i;
+    if (i === currentIndex) {
+      var elem =  document.getElementById(id);
+      if (elem.class === "appear-animate") {
+       elem.style.animation = "appear 1s ease-in 4s forwards";
+     } else {elem.style.animation = "appear 1s ease-in 2s forwards";}
+   } else {
+    document.getElementById(id).style.animation = "";
+  }
+}
+}
+
+function animateTitle() {
+  var textWrapper = document.querySelector('.ml2');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({loop: false})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 100,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-   var textWrapper = document.querySelector('.ml2');
-   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-  anime.timeline({loop: false})
-    .add({
-      targets: '.ml2 .letter',
-      scale: [4,1],
-      opacity: [0,1],
-      translateZ: 0,
-      easing: "easeOutExpo",
-      duration: 950,
-      delay: (el, i) => 70*i
-    }).add({
-      targets: '.ml2',
-      opacity: 100,
-      duration: 1000,
-      easing: "easeOutExpo",
-      delay: 1000
-    })});
+  animateTitle();
+});
