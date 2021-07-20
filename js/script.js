@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
    var textWrapper = document.querySelector('.ml2');
    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-  anime.timeline({loop: true})
+  anime.timeline({loop: false})
     .add({
       targets: '.ml2 .letter',
       scale: [4,1],
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
       delay: (el, i) => 70*i
     }).add({
       targets: '.ml2',
-      opacity: 0,
+      opacity: 100,
       duration: 1000,
       easing: "easeOutExpo",
       delay: 1000
