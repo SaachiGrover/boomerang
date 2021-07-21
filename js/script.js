@@ -151,16 +151,43 @@ function setPositionByIndex() {
   if (currentIndex === 0) {
     animateTitle();
   }
+
+  if (currentIndex === 2) {
+    Array.from(document.querySelectorAll(".google-icons")).forEach(function(element) {
+      element.style.animation = "appear 1s ease-in 2s forwards";
+    });
+  }
+
+  if (currentIndex === 3) {
+    updateCount();
+    //confetti
+    update();
+    draw();
+  }
+
+  if (currentIndex === 4) {
+    document.querySelector(".group1").style.animation = "fadeInOut1 2s linear, moveIcon1 2s";
+    document.querySelector(".group2").style.animation = "fadeInOut2 6s linear, moveIcon2 6s";
+    document.querySelector(".group3").style.animation = "fadeInOut3 10s linear, moveIcon3 10s";
+    document.querySelector(".call-count").style.animation = "translate1 2s linear";
+    document.querySelector(".call-text").style.animation = "translate1 2s linear";
+    document.querySelector(".visit-count").style.animation = "translate2 6s linear";
+    document.querySelector(".visit-text").style.animation = "translate2 6s linear";
+    document.querySelector(".lead-count").style.animation = "translate3 10s linear";
+    document.querySelector(".lead-text").style.animation = "translate3 10s linear";
+  }
+
   animateOrDisableDemographicsAge(currentIndex);
   animateOrDisableDemographicsGender(currentIndex);
   animateOrDisableDemographicsLocation(currentIndex);
   animateStatusBar(currentIndex);
-  for (let i = 1; i < 9; i++) {
-    if(i >= 2 && i <= 4) {
+  for (let i = 1; i < 12; i++) {
+    if(i >= 2 && i <= 7) {
       continue;
     }
     id = "appear-animate-" + i;
     if (i === currentIndex) {
+      console.log("id = "+id);
       var elem =  document.getElementById(id);
       if (elem.class === "appear-animate") {
        elem.style.animation = "appear 1s ease-in 4s forwards";
@@ -172,7 +199,7 @@ function setPositionByIndex() {
 }
 
 function animateStatusBar(currentIndex) {
-  for(let i = 0; i < 9; i += 1) {
+  for(let i = 0; i < 12; i += 1) {
     var elem = document.getElementById('status-bar-' + i);
     elem.style.animation = ""; 
     if(currentIndex === i) {
@@ -185,7 +212,7 @@ function animateOrDisableDemographicsAge(currentIndex) {
   for (let i = 1; i <= 5; i += 1) {
     var elem = document.getElementById('demographics-age-bar-' + i);
     elem.style.animation = "";
-    if(currentIndex === 2) {
+    if(currentIndex === 5) {
       elem.style.animation = "age_bar_appears 1s ease-in var(--bar_appear_start_time) forwards, " + 
     "age_bar_retracts 1s ease-in var(--bar_retract_start_time) forwards";;
     }
@@ -196,7 +223,7 @@ function animateOrDisableDemographicsGender(currentIndex) {
   for (let i = 1; i <= 10; i += 1) {
     var elem = document.getElementById('demographics-gender-person-' + i);
     elem.style.animation = "";
-    if(currentIndex === 3) {
+    if(currentIndex === 6) {
       elem.style.animation = "move_person 1s ease-in var(--move_person_start_time) forwards";
     }
   }
@@ -205,14 +232,14 @@ function animateOrDisableDemographicsGender(currentIndex) {
 function animateOrDisableDemographicsLocation(currentIndex) {
   var loc = document.getElementById('demographics-location-img');
   loc.style.animation = "";
-  if(currentIndex === 4) {
+  if(currentIndex === 7) {
     loc.style.animation = "location_image_appears 1s ease-in 500ms forwards, location_image_blurs 1s ease-in 2222ms forwards";
   }
 
   for (let i = 1; i <= 2; i += 1) {
     var elem = document.getElementById('demographics-location-radius-' + i);
     elem.style.animation = "";
-    if(currentIndex === 4) {
+    if(currentIndex === 7) {
       elem.style.animation = "location_radius_appears 1s ease-in var(--radius_appear_start_time) forwards";
     }
   }
