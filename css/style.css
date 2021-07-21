@@ -531,8 +531,8 @@ body {
   overflow: visible; 
   display: inline-grid; 
   gap: 4px; 
-  width: 100%; 
-  left: 0px; 
+  width: 99%; 
+  left: 0.5%; 
   height: 10px; 
   position: absolute; 
   place-content: start; 
@@ -563,7 +563,7 @@ body {
 
 .bar-filling { 
   border-radius: 0px;
-  left: -23px;
+  left: -100%;
   position: relative;
   /*animation: bar_filling_move var(--slide_time) ease-in forwards;*/
 }

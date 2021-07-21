@@ -239,4 +239,5 @@ function animateTitle() {
 
 document.addEventListener('DOMContentLoaded', function() {
   animateTitle();
+  animateStatusBar(0);
 });
