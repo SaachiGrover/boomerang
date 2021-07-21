@@ -155,7 +155,10 @@ function setPositionByIndex() {
   animateOrDisableDemographicsGender(currentIndex);
   animateOrDisableDemographicsLocation(currentIndex);
   animateStatusBar(currentIndex);
-  for (let i = 1; i < 6; i++) {
+  for (let i = 1; i < 9; i++) {
+    if(i >= 2 && i <= 4) {
+      continue;
+    }
     id = "appear-animate-" + i;
     if (i === currentIndex) {
       var elem =  document.getElementById(id);
@@ -169,7 +172,7 @@ function setPositionByIndex() {
 }
 
 function animateStatusBar(currentIndex) {
-  for(let i = 0; i < 11; i += 1) {
+  for(let i = 0; i < 9; i += 1) {
     var elem = document.getElementById('status-bar-' + i);
     elem.style.animation = ""; 
     if(currentIndex === i) {
