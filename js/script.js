@@ -192,6 +192,9 @@ function setPositionByIndex() {
     document.querySelector(".lead-text").style.animation = "";
   }
 
+  if (currentIndex == 11){
+    document.getElementById("dashboard-video").play();
+  }
   animateOrDisableDemographicsAge(currentIndex);
   animateOrDisableDemographicsGender(currentIndex);
   animateOrDisableDemographicsLocation(currentIndex);
@@ -212,7 +215,9 @@ function animateOrDisableTextAppear(currentIndex) {
 
     if (i === currentIndex) { 
       if (elem.className === "appear-animate") {
-        elem.style.animation = "appear 1s ease-in 4s forwards";
+        if (currentIndex == 11) { elem.style.animation = "appear 1s ease-in 2.5s forwards"; }
+        else { elem.style.animation = "appear 1s ease-in 4s forwards"; }
+       
       } 
       else {
         elem.style.animation = "appear 0.8s ease-in forwards";
