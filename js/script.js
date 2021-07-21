@@ -23,7 +23,7 @@ function appendNodes(name, stars, post_time, review) {
   let cards = Array.from(document.querySelectorAll('.card'))
   cards.forEach((card, index) => {
     for(let i=0; i<6; i++) {
-      console.log("clone")
+      // console.log("clone")
       let clone = card.cloneNode(true)
       let user_name = clone.querySelector('.name')
       user_name.innerText = name
@@ -55,24 +55,25 @@ window.oncontextmenu = function (event) {
   return false
 }
 
-function loadAudio (){
-  audio.src = songArray[currentIndex]
-}
+// Disable audio
+// function loadAudio (){
+//   audio.src = songArray[currentIndex]
+// }
 
-function playAudio() {
-  loadAudio()
-  audio.play()
-  isPlaying = true
-}
+// function playAudio() {
+//   loadAudio()
+//   audio.play()
+//   isPlaying = true
+// }
 
-function pauseAudio() {
-  audio.pause()
-  isPlaying = false
-}
+// function pauseAudio() {
+//   audio.pause()
+//   isPlaying = false
+// }
 
 // Finger on device
 function touchStart(index) {
-  console.log("touchstart" + index);
+  // console.log("touchstart" + index);
   return function (event) {
     currentIndex = index
     startPos = getPositionX(event)
@@ -99,22 +100,22 @@ function touchStart(index) {
 
 // Finger Removed
 function touchEnd() {
-  console.log("touchEnd");
+  // console.log("touchEnd");
   isDragging = false
   cancelAnimationFrame(animationID)
 
   // Snap in next slide after certain movement 
   const movedBy = currentTranslate - prevTranslate
   if (movedBy < -100 && currentIndex < slides.length - 1) {
-    if (isPlaying) pauseAudio()
+    // if (isPlaying) pauseAudio()
       currentIndex += 1
-    playAudio()
+    // playAudio()
     // revertAnimations()
   }
   if (movedBy > 100 && currentIndex > 0) {
-    if (isPlaying) pauseAudio()
+    // if (isPlaying) pauseAudio()
       currentIndex -= 1
-    playAudio()
+    // playAudio()
     // revertAnimations()
   }
 
@@ -123,7 +124,7 @@ function touchEnd() {
 
 // Finger moved on device
 function touchMove(event) {
-  console.log("touchMove");
+  // console.log("touchMove");
   if (isDragging) {
     const currentPosition = getPositionX(event)
     currentTranslate = prevTranslate + currentPosition - startPos
@@ -195,22 +196,42 @@ function setPositionByIndex() {
   animateOrDisableDemographicsGender(currentIndex);
   animateOrDisableDemographicsLocation(currentIndex);
   animateStatusBar(currentIndex);
-  for (let i = 1; i < 11; i++) {
+  animateOrDisableTextAppear(currentIndex);
+  // Dissolve diabled
+  // animateOrDisableReviewDissolve(currentIndex);
+}
+
+function animateOrDisableTextAppear(currentIndex) {
+  for (let i = 1; i < 12; i++) {
     if(i >= 2 && i <= 7) {
       continue;
     }
+    
     id = "appear-animate-" + i;
-    if (i === currentIndex) {
-      console.log("id = "+id);
-      var elem =  document.getElementById(id);
-      if (elem.class === "appear-animate") {
-       elem.style.animation = "appear 1s ease-in 4s forwards";
-     } else {elem.style.animation = "appear 1s ease-in 2s forwards";}
-    } else {
-      document.getElementById(id).style.animation = "";
+    var elem =  document.getElementById(id);
+
+    if (i === currentIndex) { 
+      if (elem.className === "appear-animate") {
+        elem.style.animation = "appear 1s ease-in 4s forwards";
+      } 
+      else {
+        elem.style.animation = "appear 0.8s ease-in forwards";
+      }
+    } 
+
+    else {
+      elem.style.animation = "";
     }
   }
 }
+
+// function animateOrDisableReviewDissolve(currentIndex){
+//   var elem = document.getElementById("dissolve-reviews");
+//   elem.style.animation = "";
+//   if (currentIndex === 8) {
+//     elem.style.animation = "animation: dissolve 2s ease-in 2s forwards;";
+//   }
+// }
 
 function animateStatusBar(currentIndex) {
   for(let i = 0; i < 12; i += 1) {
