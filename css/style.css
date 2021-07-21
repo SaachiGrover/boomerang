@@ -565,7 +565,7 @@ body {
   border-radius: 0px;
   left: -23px;
   position: relative;
-  animation: bar_filling_move var(--slide_time) ease-in forwards;
+  /*animation: bar_filling_move var(--slide_time) ease-in forwards;*/
 }
 
 @keyframes bar_filling_move {
@@ -648,7 +648,6 @@ body {
   grid-auto-rows: min-content; 
   margin: auto; 
   top: 457px;
-  animation: age_bar_appears 1s ease-in var(--bar_appear_start_time) forwards, age_bar_retracts 1s ease-in var(--bar_retract_start_time) forwards;
 }
 
 .demographics-age-bar-text {
@@ -682,7 +681,6 @@ body {
   object-fit: cover; 
   top: 233px; 
   z-index: 0;
-  animation: location_image_appears 1s ease-in 500ms forwards, location_image_blurs 1s ease-in 2222ms forwards;
 }
 
 @keyframes location_image_appears {
@@ -697,7 +695,6 @@ body {
   position: absolute; 
   opacity: 0; 
   background: #4285F4;
-  animation: location_radius_appears 1s ease-in var(--radius_appear_start_time) forwards;
 }
 
 .demographics-location-radius-text {
@@ -743,7 +740,6 @@ body {
   margin: auto; 
   object-fit: cover; 
   top: -63px;
-  animation: move_person 1s ease-in var(--move_person_start_time) forwards;
 }
 
 @keyframes move_person {

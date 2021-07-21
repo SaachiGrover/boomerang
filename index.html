@@ -54,7 +54,7 @@
                 <div class="bar demographics-age-background"></div>
                 <div class="bar demographics-age-background"></div>
                 <div class="bar">
-                  <div class="bar bar-filling demographics-age-background" style="--slide_time: 8s;"></div>
+                  <div class="bar bar-filling demographics-age-background" style="--slide_time: 8s;" id="status-bar-2"></div>
                 </div>
                 <div class="bar unfilled-bar"></div>
                 <div class="bar unfilled-bar"></div>
@@ -82,27 +82,27 @@
             </div> 
 
             <div style="overflow: hidden; display: block; width: 346px; left: 14px; height: 456px; position: absolute; opacity: 1; top: 137px;">
-                <div class="demographics-age-bar" style="--bar_appear_start_time:222ms; --bar_retract_start_time:6220ms; --final_top_position:278px; left:37px; height:179px; z-index:5">
+                <div class="demographics-age-bar" style="--bar_appear_start_time:222ms; --bar_retract_start_time:6220ms; --final_top_position:278px; left:37px; height:179px; z-index:5" id="demographics-age-bar-1">
                   <span class="demographics-age-bar-text">
                     <div style="text-align: left;"><b>&nbsp; &nbsp;55 +</b></div>
                   </span>
                 </div>
-                <div class="demographics-age-bar" style="--bar_appear_start_time:444ms; --bar_retract_start_time:5998ms; --final_top_position:251px; left:208px; height:206px; z-index:7">
+                <div class="demographics-age-bar" style="--bar_appear_start_time:444ms; --bar_retract_start_time:5998ms; --final_top_position:251px; left:208px; height:206px; z-index:7" id="demographics-age-bar-2">
                   <span class="demographics-age-bar-text">
                     <div style="text-align: left;"><b>45 - 50</b></div>
                   </span>
                 </div>
-                <div class="demographics-age-bar" style="--bar_appear_start_time:666ms; --bar_retract_start_time:5776ms; --final_top_position:226px; left:122px; height:231px; z-index:6">
+                <div class="demographics-age-bar" style="--bar_appear_start_time:666ms; --bar_retract_start_time:5776ms; --final_top_position:226px; left:122px; height:231px; z-index:6" id="demographics-age-bar-3">
                   <span class="demographics-age-bar-text">
                     <div style="text-align: left;"><b>35 - 45</b></div>
                   </span>
                 </div>
-                <div class="demographics-age-bar" style="--bar_appear_start_time:888ms; --bar_retract_start_time:5554ms; --final_top_position:172px; left:85px; height:285px; z-index:3">
+                <div class="demographics-age-bar" style="--bar_appear_start_time:888ms; --bar_retract_start_time:5554ms; --final_top_position:172px; left:85px; height:285px; z-index:3" id="demographics-age-bar-4">
                   <span class="demographics-age-bar-text">
                     <div style="text-align: left;"><b>25 - 35</b></div>
                   </span>
                 </div>
-                <div class="demographics-age-bar" style="--bar_appear_start_time:1110ms; --bar_retract_start_time:5332ms; --final_top_position:29px; left:173px; height:428px; z-index:4">
+                <div class="demographics-age-bar" style="--bar_appear_start_time:1110ms; --bar_retract_start_time:5332ms; --final_top_position:29px; left:173px; height:428px; z-index:4" id="demographics-age-bar-5">
                   <span class="demographics-age-bar-text">
                     <div style="text-align: left;"><b>18 - 25</b></div>
                   </span>
@@ -121,7 +121,7 @@
                 <div class="bar demographics-gender-background"></div>
                 <div class="bar demographics-gender-background"></div>
                 <div class="bar">
-                  <div class="bar bar-filling demographics-gender-background" style="--slide_time: 9s;"></div>
+                  <div class="bar bar-filling demographics-gender-background" style="--slide_time: 9s;" id= "status-bar-3"></div>
                 </div>
                 <div class="bar unfilled-bar"></div>
                 <div class="bar unfilled-bar"></div>
@@ -147,17 +147,16 @@
                 </span>
             </div>
             <div class="demographics-gender-population">
-                <img class="demographics-gender-person" src="image/female.svg" style="left: 20px; --person_final_position:80px;--move_person_start_time: 1110ms;"/>
-                <img class="demographics-gender-person" src="image/female.svg" style="left: 20px; --person_final_position:10px;--move_person_start_time: 2220ms;"/>
-                <img class="demographics-gender-person" src="image/female.svg" style="left: 90px; --person_final_position:80px;--move_person_start_time: 888ms;"/>
-                <img class="demographics-gender-person" src="image/female.svg" style="left: 90px; --person_final_position:10px;--move_person_start_time: 1998ms;"/>
-                <img class="demographics-gender-person" src="image/female.svg" style="left: 160px; --person_final_position:10px;--move_person_start_time: 1776ms;"/>
-                <img class="demographics-gender-person" src="image/female.svg" style="left: 230px; --person_final_position:10px;--move_person_start_time: 1554ms;"/>
-                <img class="demographics-gender-person" src="image/female.svg" style="left: 300px; --person_final_position:10px;--move_person_start_time: 1332ms;"/>
-
-                <img class="demographics-gender-person" src="image/male.svg" style="left: 160px; --person_final_position:80px; --move_person_start_time: 666ms;"/>
-                <img class="demographics-gender-person" src="image/male.svg" style="left: 230px; --person_final_position:80px; --move_person_start_time: 444ms;"/>
-                <img class="demographics-gender-person" src="image/male.svg" style="left: 300px; --person_final_position:80px; --move_person_start_time: 222ms;"/>
+                <img class="demographics-gender-person" src="image/male.svg" style="left: 300px; --person_final_position:80px; --move_person_start_time: 222ms;" id = "demographics-gender-person-1"/>
+                <img class="demographics-gender-person" src="image/male.svg" style="left: 230px; --person_final_position:80px; --move_person_start_time: 444ms;" id = "demographics-gender-person-2"/>
+                <img class="demographics-gender-person" src="image/male.svg" style="left: 160px; --person_final_position:80px; --move_person_start_time: 666ms;" id = "demographics-gender-person-3"/>
+                <img class="demographics-gender-person" src="image/female.svg" style="left: 90px; --person_final_position:80px;--move_person_start_time: 888ms;" id = "demographics-gender-person-4"/>
+                <img class="demographics-gender-person" src="image/female.svg" style="left: 20px; --person_final_position:80px;--move_person_start_time: 1110ms;" id = "demographics-gender-person-5"/>
+                <img class="demographics-gender-person" src="image/female.svg" style="left: 300px; --person_final_position:10px;--move_person_start_time: 1332ms;" id = "demographics-gender-person-6"/>
+                <img class="demographics-gender-person" src="image/female.svg" style="left: 230px; --person_final_position:10px;--move_person_start_time: 1554ms;" id = "demographics-gender-person-7"/>
+                <img class="demographics-gender-person" src="image/female.svg" style="left: 160px; --person_final_position:10px;--move_person_start_time: 1776ms;" id = "demographics-gender-person-8"/>
+                <img class="demographics-gender-person" src="image/female.svg" style="left: 90px; --person_final_position:10px;--move_person_start_time: 1998ms;" id = "demographics-gender-person-9"/>
+                <img class="demographics-gender-person" src="image/female.svg" style="left: 20px; --person_final_position:10px;--move_person_start_time: 2220ms;" id = "demographics-gender-person-10"/>                
             </div>
         </div>
 
@@ -173,7 +172,7 @@
                 <div class="bar demographics-location-background"></div>
                 <div class="bar demographics-location-background"></div>
                 <div class="bar">
-                  <div class="bar bar-filling demographics-location-background" style="--slide_time: 7s;"></div>
+                  <div class="bar bar-filling demographics-location-background" style="--slide_time: 7s;" id= "status-bar-4"></div>
                 </div>
                 <div class="bar unfilled-bar"></div>
                 <div class="bar unfilled-bar"></div>
@@ -199,11 +198,11 @@
                 </span>
             </div> 
 
-            <img src="image/location.png" class="demographics-location-image">
-                <div class="demographics-location-radius" style="--final_radius_opacity:0.38; --radius_appear_start_time:1222ms; width: 319px; height: 319px; top: 235px; z-index: 1; border-radius: 166px;">
+            <img src="image/location.png" class="demographics-location-image" id="demographics-location-img">
+                <div class="demographics-location-radius" style="--final_radius_opacity:0.38; --radius_appear_start_time:1222ms; width: 319px; height: 319px; top: 235px; z-index: 1; border-radius: 166px;" id="demographics-location-radius-1">
                     <span class="demographics-location-radius-text" style="left:91px; top:2px">Targeted region</span>
                 </div>
-                <div class="demographics-location-radius" style="--final_radius_opacity:0.52; --radius_appear_start_time:2222ms; width: 187px; height: 187px; top: 294px; z-index: 2; border-radius: 103px;">
+                <div class="demographics-location-radius" style="--final_radius_opacity:0.52; --radius_appear_start_time:2222ms; width: 187px; height: 187px; top: 294px; z-index: 2; border-radius: 103px;" id="demographics-location-radius-2">
                     <span class="demographics-location-radius-text" style="left:27px; top:79px">Most active region</span>
                 </div>
             </img>
