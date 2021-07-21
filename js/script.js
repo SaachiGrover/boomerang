@@ -198,7 +198,7 @@ function setPositionByIndex() {
   animateStatusBar(currentIndex);
   animateOrDisableTextAppear(currentIndex);
   // Dissolve diabled
-  // animateOrDisableReviewDissolve(currentIndex);
+  animateOrDisableReviewDissolve(currentIndex);
 }
 
 function animateOrDisableTextAppear(currentIndex) {
@@ -225,13 +225,13 @@ function animateOrDisableTextAppear(currentIndex) {
   }
 }
 
-// function animateOrDisableReviewDissolve(currentIndex){
-//   var elem = document.getElementById("dissolve-reviews");
-//   elem.style.animation = "";
-//   if (currentIndex === 8) {
-//     elem.style.animation = "animation: dissolve 2s ease-in 2s forwards;";
-//   }
-// }
+function animateOrDisableReviewDissolve(currentIndex){
+  var elem = document.getElementById("dissolve-reviews");
+  elem.style.animation = "";
+  if (currentIndex === 8) {
+    elem.style.animation = "dissolve 2s ease-in 2s forwards";
+  }
+}
 
 function animateStatusBar(currentIndex) {
   for(let i = 0; i < 12; i += 1) {
