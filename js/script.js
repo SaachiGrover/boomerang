@@ -181,7 +181,7 @@ function setPositionByIndex() {
   animateOrDisableDemographicsGender(currentIndex);
   animateOrDisableDemographicsLocation(currentIndex);
   animateStatusBar(currentIndex);
-  for (let i = 1; i < 12; i++) {
+  for (let i = 1; i < 11; i++) {
     if(i >= 2 && i <= 7) {
       continue;
     }
