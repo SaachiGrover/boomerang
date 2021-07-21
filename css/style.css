@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Google+Sans');
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,8 @@
 
 html,
 body {
-  font-family: 'Open Sans', sans-serif;
+  //font-family: 'Open Sans', sans-serif;
+  font-family: 'Google Sans';
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -625,7 +626,7 @@ top: 484px;
   align-items: center;
   text-align: center;
   font-style: normal;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Google Sans';
 }
 
 .count {
