@@ -158,6 +158,13 @@ function setPositionByIndex() {
     });
   }
 
+  if (currentIndex === 3) {
+    updateCount();
+    //confetti
+    update();
+    draw();
+  }
+
   if (currentIndex === 4) {
     document.querySelector(".group1").style.animation = "fadeInOut1 2s linear, moveIcon1 2s";
     document.querySelector(".group2").style.animation = "fadeInOut2 6s linear, moveIcon2 6s";
@@ -169,7 +176,10 @@ function setPositionByIndex() {
     document.querySelector(".lead-count").style.animation = "translate3 10s linear";
     document.querySelector(".lead-text").style.animation = "translate3 10s linear";
   }
-  for (let i = 1; i < 6; i++) {
+  for (let i = 1; i < 9; i++) {
+    if (i>=2 && i<5) {
+      continue;
+    }
     id = "appear-animate-" + i;
     if (i === currentIndex) {
       var elem =  document.getElementById(id);

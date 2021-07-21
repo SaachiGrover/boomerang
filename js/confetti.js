@@ -15,7 +15,7 @@ function randomColor () {
     return colors[Math.floor(Math.random() * colors.length)];
 }
 
-function update () {
+function updateUtil () {
     let now = Date.now(),
         dt = now - lastUpdateTime;
 
@@ -38,7 +38,7 @@ function update () {
 
     lastUpdateTime = now;
 
-    setTimeout(update, 1);
+    setTimeout(updateUtil, 1);
 }
 
 function draw () {
@@ -74,5 +74,10 @@ while (pieces.length < numberOfPieces) {
     pieces.push(new Piece(Math.random() * canvas.width, Math.random() * canvas.height));
 }
 
-update();
-draw();
+function update() {
+    lastUpdateTime = Date.now();
+    updateUtil();
+}
+
+//update();
+//draw();

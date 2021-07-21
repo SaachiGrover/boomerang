@@ -26,4 +26,4 @@ const speed = 500; // The lower the slower
         }
     };
 
-    updateCount();
+   // updateCount();
