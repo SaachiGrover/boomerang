@@ -289,12 +289,13 @@ body {
 }
 
 
-.dissolve {
-  animation: dissolve 2s ease-in 1s forwards;
-}
+/* .dissolve  {
+  animation: dissolve 2s ease-in 2s forwards;
+} */
 
 @keyframes dissolve {
-  100% {opacity: 0.25}
+  0% {opacity: 1;}
+  100% {opacity: 0.25;}
 }
 
 .column {
@@ -318,7 +319,7 @@ body {
 }
 
 .column1 {
-  left:-284px;
+  left:-266px;
   top:-31px;
   animation: column1_move 10s linear alternate infinite;
 }
@@ -328,8 +329,8 @@ body {
 }
 
 .column2 {
-  left:-1px;
-  top:-383px;
+  left:17px;
+  top:-323px;
   animation: column2_move 10s linear alternate infinite;
 }
 
@@ -338,7 +339,7 @@ body {
 }
 
 .column3 {
-  left:282px;
+  left:300px;
   top:-24px;
   animation: column3_move 10s linear alternate infinite;
 }
@@ -754,7 +755,7 @@ body {
 .red-background {background: #EA4335;}
 .white-background {background: #FFFFFF;}
 
-// impressions and calls
+/* impressions and calls */
 
 .google-icons {
   position: absolute;
