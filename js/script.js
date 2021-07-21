@@ -176,8 +176,14 @@ function setPositionByIndex() {
     document.querySelector(".lead-count").style.animation = "translate3 10s linear";
     document.querySelector(".lead-text").style.animation = "translate3 10s linear";
   }
-  for (let i = 1; i < 9; i++) {
-    if (i>=2 && i<5) {
+  for (let i = 1; i < 12; i++) {
+    if (i>=4 && i<7) {
+  animateOrDisableDemographicsAge(currentIndex);
+  animateOrDisableDemographicsGender(currentIndex);
+  animateOrDisableDemographicsLocation(currentIndex);
+  animateStatusBar(currentIndex);
+  for (let i = 1; i < 12; i++) {
+    if(i >= 2 && i <= 7) {
       continue;
     }
     id = "appear-animate-" + i;
@@ -186,10 +192,57 @@ function setPositionByIndex() {
       if (elem.class === "appear-animate") {
        elem.style.animation = "appear 1s ease-in 4s forwards";
      } else {elem.style.animation = "appear 1s ease-in 2s forwards";}
-   } else {
-    document.getElementById(id).style.animation = "";
+    } else {
+      document.getElementById(id).style.animation = "";
+    }
   }
 }
+
+function animateStatusBar(currentIndex) {
+  for(let i = 0; i < 9; i += 1) {
+    var elem = document.getElementById('status-bar-' + i);
+    elem.style.animation = ""; 
+    if(currentIndex === i) {
+      elem.style.animation = "bar_filling_move var(--slide_time) ease-in forwards";
+    }
+  }
+}
+
+function animateOrDisableDemographicsAge(currentIndex) {
+  for (let i = 1; i <= 5; i += 1) {
+    var elem = document.getElementById('demographics-age-bar-' + i);
+    elem.style.animation = "";
+    if(currentIndex === 2) {
+      elem.style.animation = "age_bar_appears 1s ease-in var(--bar_appear_start_time) forwards, " + 
+    "age_bar_retracts 1s ease-in var(--bar_retract_start_time) forwards";;
+    }
+  }
+}
+
+function animateOrDisableDemographicsGender(currentIndex) {
+  for (let i = 1; i <= 10; i += 1) {
+    var elem = document.getElementById('demographics-gender-person-' + i);
+    elem.style.animation = "";
+    if(currentIndex === 3) {
+      elem.style.animation = "move_person 1s ease-in var(--move_person_start_time) forwards";
+    }
+  }
+}
+
+function animateOrDisableDemographicsLocation(currentIndex) {
+  var loc = document.getElementById('demographics-location-img');
+  loc.style.animation = "";
+  if(currentIndex === 4) {
+    loc.style.animation = "location_image_appears 1s ease-in 500ms forwards, location_image_blurs 1s ease-in 2222ms forwards";
+  }
+
+  for (let i = 1; i <= 2; i += 1) {
+    var elem = document.getElementById('demographics-location-radius-' + i);
+    elem.style.animation = "";
+    if(currentIndex === 4) {
+      elem.style.animation = "location_radius_appears 1s ease-in var(--radius_appear_start_time) forwards";
+    }
+  }
 }
 
 function animateTitle() {
@@ -216,4 +269,5 @@ function animateTitle() {
 
 document.addEventListener('DOMContentLoaded', function() {
   animateTitle();
+  animateStatusBar(0);
 });
