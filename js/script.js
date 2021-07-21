@@ -156,6 +156,10 @@ function setPositionByIndex() {
     Array.from(document.querySelectorAll(".google-icons")).forEach(function(element) {
       element.style.animation = "appear 1s ease-in 2s forwards";
     });
+  } else {
+    Array.from(document.querySelectorAll(".google-icons")).forEach(function(element) {
+      element.style.animation = "";
+    });
   }
 
   if (currentIndex === 3) {
@@ -175,6 +179,16 @@ function setPositionByIndex() {
     document.querySelector(".visit-text").style.animation = "translate2 6s linear";
     document.querySelector(".lead-count").style.animation = "translate3 10s linear";
     document.querySelector(".lead-text").style.animation = "translate3 10s linear";
+  } else {
+    document.querySelector(".group1").style.animation = "";
+    document.querySelector(".group2").style.animation = "";
+    document.querySelector(".group3").style.animation = "";
+    document.querySelector(".call-count").style.animation = "";
+    document.querySelector(".call-text").style.animation = "";
+    document.querySelector(".visit-count").style.animation = "";
+    document.querySelector(".visit-text").style.animation = "";
+    document.querySelector(".lead-count").style.animation = "";
+    document.querySelector(".lead-text").style.animation = "";
   }
 
   animateOrDisableDemographicsAge(currentIndex);
@@ -182,7 +196,7 @@ function setPositionByIndex() {
   animateOrDisableDemographicsLocation(currentIndex);
   animateStatusBar(currentIndex);
   for (let i = 1; i < 11; i++) {
-    if(i >= 2 && i <= 7) {
+    if(i > 2 && i <= 7) {
       continue;
     }
     id = "appear-animate-" + i;
