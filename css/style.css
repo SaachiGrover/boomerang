@@ -525,3 +525,247 @@ body {
   50% {transform: scale(0.67);}
   100% {transform: scale(1);}
 }
+
+.google-icons {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 479px;
+  background-repeat: no-repeat;
+  transform: translate(-50%, 100%);
+  background-size: 100%;
+  opacity: 0;
+}
+
+.impressions-text {
+  line-height: 1.2;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #343536;
+  position: absolute;
+  top: 20%;
+  padding: 10px;
+  display: grid;
+}
+
+.impressions {
+  width: 414px;
+  height: 736px;
+  position: relative;
+}
+
+.impressions-background {
+  height: 100%;
+  width: auto;
+  background-image: url(../image/desktopcalendar.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto;
+  filter: blur(1px);
+  filter: opacity(0.4);
+}
+
+.click-icon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-image: url(../image/click.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform: translate(50% 50%);
+  top: 30px;
+  left: 35%;
+  background-position: center center;
+  background-size: 100%;
+}
+
+h1 {
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 40%;
+  font-size: 4em;
+  color: #fbbc04;
+}
+
+p {
+  font-weight: bold;
+  text-align: center;
+  font-size: 3em;
+  line-height: 1;
+  padding-bottom: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.icons {
+  position: absolute;
+  width: 111px;
+  height: 111px;
+  left: 34px;
+  opacity: 1;
+}
+
+.group1 {
+  top: 126px;
+}
+
+.group2 {
+top: 305px;
+}
+
+.group3 {
+top: 484px;
+}
+
+.content {
+  position: absolute;
+  left: 190px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-style: normal;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.count {
+  width: 112px;
+  height: 75px;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+  color: #FCC934;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+}
+
+.call-count {
+  top: 126px;
+}
+
+.call-text {
+  width: 76px;
+  height: 42px;
+  top: 200px;
+}
+
+.visit-count {
+  top: 305px;
+}
+
+.visit-text {
+  width: 180px;
+  height: 42px;
+  top: 380px;
+}
+
+.lead-count {
+  top: 477px;
+}
+
+.lead-text {
+  width: 173px;
+  height: 84px;
+  top: 560px;
+  text-align: left;
+}
+
+@-webkit-keyframes fadeInOut1 {
+  0% { opacity: 0; }
+  50%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeInOut1 {
+  0% { opacity: 0; }
+  50%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeInOut2 {
+  0% { opacity: 0; }
+  50%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeInOut2 {
+  0% { opacity: 0; }
+  50%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeInOut3 {
+  0% { opacity: 0; }
+  70%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeInOut3 {
+  0% { opacity: 0; }
+  70%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes moveIcon1 {
+  0%     { top: 0px; }
+  25%    { top: 0px; }
+  30%    { top: 140px; }
+  65%    { top: 90px; }
+  100%   { top: 126px}
+}
+@keyframes moveIcon1 {
+  0%     { top: 0px; }
+  25%    { top: 0px; }
+  30%    { top: 140px; }
+  65%    { top: 90px; }
+  100%   { top: 126px}
+}
+
+@-webkit-keyframes moveIcon2 {
+  0%     { top: 0px; }
+  50%    { top: 0px; }
+  65%    { top: 320px; }
+  85%    { top: 290px; }
+  100%   { top: 305px}
+}
+@keyframes moveIcon2 {
+  0%     { top: 0px; }
+  50%    { top: 0px; }
+  65%    { top: 320px; }
+  85%    { top: 290px; }
+  100%   { top: 305px}
+}
+
+@-webkit-keyframes moveIcon3 {
+  0%     { top: 0px; }
+  70%    { top: 0px; }
+  80%    { top: 500px; }
+  90%    { top: 470px; }
+  100%   { top: 484px}
+}
+@keyframes moveIcon3 {
+  0%     { top: 0px; }
+  70%    { top: 0px; }
+  80%    { top: 500px; }
+  90%    { top: 470px; }
+  100%   { top: 484px}
+}
+@keyframes translate1 {
+  0% { left: 500px; }
+  50% { left: 500px; }
+  100% { left: 190px; }
+}
+
+@keyframes translate2 {
+  0% { left: 500px; }
+  80% { left: 500px; }
+  100% { left: 190px; }
+}
+
+@keyframes translate3 {
+  0% { left: 500px; }
+  90% { left: 500px; }
+  100% { left: 190px; }
+}
