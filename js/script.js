@@ -169,7 +169,7 @@ function setPositionByIndex() {
 }
 
 function animateStatusBar(currentIndex) {
-  for(let i = 2; i < 5; i += 1) {
+  for(let i = 0; i < 11; i += 1) {
     var elem = document.getElementById('status-bar-' + i);
     elem.style.animation = ""; 
     if(currentIndex === i) {
