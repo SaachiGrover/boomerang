@@ -125,7 +125,7 @@ body {
   height:73px;
   position:absolute;
   margin:auto;
-  font:400 22px/29.2px Google Sans;
+  font:400 28px/29.2px Google Sans;
   vertical-align:top;
   padding:8px 8px 8px 8px;
   top:180px;
@@ -140,8 +140,8 @@ body {
   left:39px;
   position:absolute;
   margin:auto;
-  font:400 40px/48.8px Google Sans;
-  padding:29px 29px 29px 29px;
+  font:400 48px/48.8px Google Sans;
+  padding:29px 29px 29px 26px;
   border-radius:63px 63px 63px 63px;
   letter-spacing:normal;
 }
@@ -212,14 +212,14 @@ body {
   padding: 0.6rem;
   margin: 1% auto;
 	text-align: center;
-  font:100 14px/18.8px Google Sans;
+  font:100 24px/18.8px Google Sans;
   vertical-align: middle;
 }
 
 .cta-button-blue {
   position:absolute;
-  top:511px;
-  left:123px;
+  top:540px;
+  left:95px;
   /* align-self: center; */
   /* background-color:var(--co-primary, #1967D2); */
   background-color: #4285F4;
@@ -236,14 +236,15 @@ body {
   padding: 0.6rem;
   margin: 1% auto;
 	text-align: center;
-  font:100 14px/18.8px Google Sans;
+  font:100 24px/18.8px Google Sans;
   vertical-align: middle;
 }
 
 .cta-button-green {
   position:absolute;
-  top:511px;
-  left:123px;
+  transform: translate(200%, 200%);
+  top:480px;
+  left:-100px;
   /* align-self: center; */
   background-color:var(--co-7ggcp, #42AE66);
   color: #fff;
@@ -259,7 +260,7 @@ body {
   padding: 0.6rem;
   margin: 1% auto;
 	text-align: center;
-  font:100 14px/18.8px Google Sans;
+  font:100 24px/20.8px Google Sans;
   vertical-align: middle;
 }
 
