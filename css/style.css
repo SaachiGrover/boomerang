@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Google+Sans');
 
 * {
@@ -8,8 +9,7 @@
 
 html,
 body {
-  //font-family: 'Open Sans', sans-serif;
-  font-family: 'Google Sans';
+  font-family: Google Sans;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -564,7 +564,7 @@ body {
   background-position: 50% 50%;
   background-size: auto;
   filter: blur(1px);
-  filter: opacity(0.4);
+  filter: opacity(0.3);
 }
 
 .click-icon {
