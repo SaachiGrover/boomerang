@@ -546,7 +546,7 @@ body {
   place-items: start; 
   top: 6px; 
   grid-template-rows: 1fr; 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   z-index: 1000
 }
 
