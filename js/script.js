@@ -192,7 +192,7 @@ function setPositionByIndex() {
     document.querySelector(".lead-text").style.animation = "";
   }
 
-  if (currentIndex == 10){
+  if (currentIndex == 9){
     document.getElementById("dashboard-video").play();
   }
   animateOrDisableDemographicsAge(currentIndex);
@@ -205,7 +205,7 @@ function setPositionByIndex() {
 }
 
 function animateOrDisableTextAppear(currentIndex) {
-  for (let i = 1; i < 11; i++) {
+  for (let i = 1; i < 10; i++) {
     if(i >= 2 && i <= 6) {
       continue;
     }
@@ -215,7 +215,7 @@ function animateOrDisableTextAppear(currentIndex) {
 
     if (i === currentIndex) { 
       if (elem.className === "appear-animate") {
-        if (currentIndex == 10) { elem.style.animation = "appear 1s ease-in 2.5s forwards"; }
+        if (currentIndex == 9) { elem.style.animation = "appear 1s ease-in 2.5s forwards"; }
         else { elem.style.animation = "appear 1s ease-in 4s forwards"; }
        
       } 
@@ -239,7 +239,7 @@ function animateOrDisableReviewDissolve(currentIndex){
 }
 
 function animateStatusBar(currentIndex) {
-  for(let i = 0; i < 11; i += 1) {
+  for(let i = 0; i < 10; i += 1) {
     var elem = document.getElementById('status-bar-' + i);
     elem.style.animation = ""; 
     if(currentIndex === i) {
