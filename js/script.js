@@ -171,15 +171,15 @@ function setPositionByIndex() {
   }
 
   if (currentIndex === 4) {
-    document.querySelector(".group1").style.animation = "fadeInOut1 2s linear, moveIcon1 2s";
-    document.querySelector(".group2").style.animation = "fadeInOut2 6s linear, moveIcon2 6s";
-    document.querySelector(".group3").style.animation = "fadeInOut3 10s linear, moveIcon3 10s";
-    document.querySelector(".call-count").style.animation = "translate1 2s linear";
-    document.querySelector(".call-text").style.animation = "translate1 2s linear";
-    document.querySelector(".visit-count").style.animation = "translate2 6s linear";
-    document.querySelector(".visit-text").style.animation = "translate2 6s linear";
-    document.querySelector(".lead-count").style.animation = "translate3 10s linear";
-    document.querySelector(".lead-text").style.animation = "translate3 10s linear";
+    document.querySelector(".group1").style.animation = "fadeInOut1 0.5s linear, moveIcon1 0.5s";
+    document.querySelector(".group2").style.animation = "fadeInOut2 1.5s linear, moveIcon2 1.5s";
+    document.querySelector(".group3").style.animation = "fadeInOut3 2.5s linear, moveIcon3 2.5s";
+    document.querySelector(".call-count").style.animation = "translate1 0.5s linear";
+    document.querySelector(".call-text").style.animation = "translate1 0.5s linear";
+    document.querySelector(".visit-count").style.animation = "translate2 1.5s linear";
+    document.querySelector(".visit-text").style.animation = "translate2 1.5s linear";
+    document.querySelector(".lead-count").style.animation = "translate3 2.5s linear";
+    document.querySelector(".lead-text").style.animation = "translate3 2.5s linear";
   } else {
     document.querySelector(".group1").style.animation = "";
     document.querySelector(".group2").style.animation = "";
