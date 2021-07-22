@@ -1,5 +1,5 @@
 const counters = document.querySelectorAll('.container');
-const speed = 500; // The lower the slower
+const inc = 2; 
 
     const updateCount = () => {
     //	const counter = document.querySelector("h1");
@@ -10,7 +10,7 @@ const speed = 500; // The lower the slower
     	const count = +counter.innerText;
 
         // Lower inc to slow and higher to slow
-        const inc = target / speed;
+        // const inc = target / speed;
 
         // console.log(inc);
         // console.log(count);
