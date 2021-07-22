@@ -215,7 +215,7 @@ function animateOrDisableTextAppear(currentIndex) {
 
     if (i === currentIndex) { 
       if (elem.className === "appear-animate") {
-        if (currentIndex == 11) { elem.style.animation = "appear 1s ease-in 2.5s forwards"; }
+        if (currentIndex == 10) { elem.style.animation = "appear 1s ease-in 2.5s forwards"; }
         else { elem.style.animation = "appear 1s ease-in 4s forwards"; }
        
       } 
