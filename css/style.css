@@ -77,12 +77,13 @@ body {
   opacity:1;
   margin:auto;
   object-fit:cover;
+  z-index: 5000;
 }
 
 .business-name {
   overflow:visible;
   display:inline-block;
-  width:109px;
+  width:130px;
   height:33px;
 
   position:absolute;
@@ -97,6 +98,7 @@ body {
   border-radius:0px 0px 0px 0px;
   color:#E0E0E0;
   letter-spacing:normal;
+  z-index: 5000;
 }
 
 .appear-animate {
@@ -544,7 +546,7 @@ body {
   place-items: start; 
   top: 6px; 
   grid-template-rows: 1fr; 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   z-index: 1000
 }
 
@@ -567,7 +569,6 @@ body {
   border-radius: 0px;
   left: -100%;
   position: relative;
-  /*animation: bar_filling_move var(--slide_time) ease-in forwards;*/
 }
 
 @keyframes bar_filling_move {

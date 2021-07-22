@@ -192,12 +192,12 @@ function setPositionByIndex() {
     document.querySelector(".lead-text").style.animation = "";
   }
 
-  if (currentIndex == 11){
+  if (currentIndex == 10){
     document.getElementById("dashboard-video").play();
   }
   animateOrDisableDemographicsAge(currentIndex);
   animateOrDisableDemographicsGender(currentIndex);
-  animateOrDisableDemographicsLocation(currentIndex);
+  // animateOrDisableDemographicsLocation(currentIndex);
   animateStatusBar(currentIndex);
   animateOrDisableTextAppear(currentIndex);
   // Dissolve diabled
@@ -205,8 +205,8 @@ function setPositionByIndex() {
 }
 
 function animateOrDisableTextAppear(currentIndex) {
-  for (let i = 1; i < 12; i++) {
-    if(i >= 2 && i <= 7) {
+  for (let i = 1; i < 11; i++) {
+    if(i >= 2 && i <= 6) {
       continue;
     }
     
@@ -233,13 +233,13 @@ function animateOrDisableTextAppear(currentIndex) {
 function animateOrDisableReviewDissolve(currentIndex){
   var elem = document.getElementById("dissolve-reviews");
   elem.style.animation = "";
-  if (currentIndex === 8) {
+  if (currentIndex === 7) {
     elem.style.animation = "dissolve 2s ease-in 2s forwards";
   }
 }
 
 function animateStatusBar(currentIndex) {
-  for(let i = 0; i < 12; i += 1) {
+  for(let i = 0; i < 11; i += 1) {
     var elem = document.getElementById('status-bar-' + i);
     elem.style.animation = ""; 
     if(currentIndex === i) {
@@ -269,21 +269,21 @@ function animateOrDisableDemographicsGender(currentIndex) {
   }
 }
 
-function animateOrDisableDemographicsLocation(currentIndex) {
-  var loc = document.getElementById('demographics-location-img');
-  loc.style.animation = "";
-  if(currentIndex === 7) {
-    loc.style.animation = "location_image_appears 1s ease-in 500ms forwards, location_image_blurs 1s ease-in 2222ms forwards";
-  }
+// function animateOrDisableDemographicsLocation(currentIndex) {
+//   var loc = document.getElementById('demographics-location-img');
+//   loc.style.animation = "";
+//   if(currentIndex === 7) {
+//     loc.style.animation = "location_image_appears 1s ease-in 500ms forwards, location_image_blurs 1s ease-in 2222ms forwards";
+//   }
 
-  for (let i = 1; i <= 2; i += 1) {
-    var elem = document.getElementById('demographics-location-radius-' + i);
-    elem.style.animation = "";
-    if(currentIndex === 7) {
-      elem.style.animation = "location_radius_appears 1s ease-in var(--radius_appear_start_time) forwards";
-    }
-  }
-}
+//   for (let i = 1; i <= 2; i += 1) {
+//     var elem = document.getElementById('demographics-location-radius-' + i);
+//     elem.style.animation = "";
+//     if(currentIndex === 7) {
+//       elem.style.animation = "location_radius_appears 1s ease-in var(--radius_appear_start_time) forwards";
+//     }
+//   }
+// }
 
 function animateTitle() {
   var textWrapper = document.querySelector('.ml2');
