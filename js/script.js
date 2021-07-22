@@ -18,19 +18,19 @@ let isDragging = false, // Is mouse clicked/finger on device; only for browser h
   isPlaying = true // Is slide audio playing
 
 // Temp function for adding review clones to fill screen
-appendNodes("Shefali Singh", null, null, null)
-function appendNodes(name, stars, post_time, review) {
-  let cards = Array.from(document.querySelectorAll('.card'))
-  cards.forEach((card, index) => {
-    for(let i=0; i<6; i++) {
-      // console.log("clone")
-      let clone = card.cloneNode(true)
-      let user_name = clone.querySelector('.name')
-      user_name.innerText = name
-      card.parentNode.appendChild(clone);
-    }
-  })
-}
+// appendNodes("Shefali Singh", null, null, null)
+// function appendNodes(name, stars, post_time, review) {
+//   let cards = Array.from(document.querySelectorAll('.card'))
+//   cards.forEach((card, index) => {
+//     for(let i=0; i<6; i++) {
+//       // console.log("clone")
+//       let clone = card.cloneNode(true)
+//       let user_name = clone.querySelector('.name')
+//       user_name.innerText = name
+//       card.parentNode.appendChild(clone);
+//     }
+//   })
+// }
 
 slides.forEach((slide, index) => {
   // Prevent default image selection upon hover
