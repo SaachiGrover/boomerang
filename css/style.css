@@ -593,7 +593,7 @@ body {
 }
 
 .demographics-title {
-  left: 0px;
+  left: 20px;
   text-align: center;
   position: absolute;
   font: 400 22px / 33px "Google Sans"; 
