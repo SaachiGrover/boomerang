@@ -157,10 +157,12 @@ function setPositionByIndex() {
     Array.from(document.querySelectorAll(".google-icons")).forEach(function(element) {
       element.style.animation = "appear 1s ease-in 2s forwards";
     });
+    document.querySelector(".impressions-text").style.animation = "0.8s ease-in 0s 1 normal forwards running appear";
   } else {
     Array.from(document.querySelectorAll(".google-icons")).forEach(function(element) {
       element.style.animation = "";
     });
+    document.querySelector(".impressions-text").style.animation = "";
   }
 
   if (currentIndex === 3) {

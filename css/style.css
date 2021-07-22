@@ -762,7 +762,7 @@ body {
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 479px;
+  top: 460px;
   background-repeat: no-repeat;
   transform: translate(-50%, 100%);
   background-size: 100%;
@@ -774,11 +774,12 @@ body {
   text-align: center;
   font-size: 2em;
   font-weight: bold;
-  color: #343536;
+  color: #ffffff;
   position: absolute;
   top: 20%;
   padding: 10px;
   display: grid;
+  opacity: 0;
 }
 
 .impressions {
