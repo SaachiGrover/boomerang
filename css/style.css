@@ -214,7 +214,7 @@ body {
   padding: 0.6rem;
   margin: 1% auto;
 	text-align: center;
-  font:100 24px/18.8px Google Sans;
+  font: 80 24px/18px Google Sans;
   vertical-align: middle;
 }
 
@@ -246,7 +246,7 @@ body {
   position:absolute;
   transform: translate(200%, 200%);
   top:480px;
-  left:-100px;
+  left:-90px;
   /* align-self: center; */
   background-color:var(--co-7ggcp, #42AE66);
   color: #fff;
@@ -262,7 +262,7 @@ body {
   padding: 0.6rem;
   margin: 1% auto;
 	text-align: center;
-  font:100 24px/20.8px Google Sans;
+  font: 80 24px/18px Google Sans;
   vertical-align: middle;
 }
 
